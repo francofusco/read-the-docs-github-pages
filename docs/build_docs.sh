@@ -53,6 +53,9 @@ git checkout -b gh-pages
 # that start with an underscore (_), such as our "_content" dir..
 touch .nojekyll
 
+touch README.md
+echo "This is not the branch you are looking for. Check the other branches for the actual repository content."
+
 # copy the resulting html pages built from sphinx above to our new git repo
 git add .
 
