@@ -54,7 +54,7 @@ git checkout -b gh-pages
 touch .nojekyll
 
 touch README.md
-echo "This is not the branch you are looking for. Check the other branches for the actual repository content."
+echo "This is not the branch you are looking for. Check the other branches for the actual repository content." > README.md
 
 # copy the resulting html pages built from sphinx above to our new git repo
 git add .
