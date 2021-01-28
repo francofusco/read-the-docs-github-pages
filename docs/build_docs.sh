@@ -17,7 +17,7 @@ echo "Event: ${GITHUB_EVENT_NAME}"
 # DEPENDENCIES #
 ################
 
-apt update && apt install -y git python3-sphinx python3-sphinx-rtd-theme rsync
+apt-get update && apt-get install -y git python3-sphinx python3-sphinx-rtd-theme rsync
 
 #####################
 # DECLARE VARIABLES #
@@ -36,8 +36,8 @@ make -C docs html
 # Update GitHub Pages #
 #######################
 
-git config user.name "${GITHUB_ACTOR}"
-git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+git config --global user.name "${GITHUB_ACTOR}"
+git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
 docroot=`mktemp -d`
 rsync -av "docs/_build/html/" "${docroot}/"
